@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HTML5 Skeleton</title>
+    <link rel="shortcut icon" href="/favistack/png/32" data-flexicon="/flexicon/">
+    <!-- Need to remove existing LINK tag and then replace with dynamic ones. data- Attribute might help pass some more data -->
+    <script>
+        function SetFavicon() {
+            var headNode = document.getElementsByTagName("head")[0];
+            var favicon = document.createElement("link");
+            favicon.setAttribute("rel", "icon");
+            favicon.setAttribute("href", "icon.ico");
+            headNode.appendChild(favicon);
+        }
+
+        function getAllElementsWithAttribute(attribute)
+        {
+            var matchingElements = [];
+            var allElements = document.getElementsByTagName('link');
+            for (var i = 0, n = allElements.length; i < n; i++)
+            {
+                if (allElements[i].getAttribute(attribute))
+                {
+                    // Element exists with attribute. Add to array.
+                    matchingElements.push(allElements[i]);
+                }
+            }
+            return matchingElements;
+        }
+
+        SetFavicon();
+    </script>
+
+    <!--
+ 
+    Standard:
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    iOS:
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon-152x152.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" href="/favicon-57x57.png">
+
+    Android:
+    <link rel="shortcut icon" sizes="196x196" href="/favicon-196x196.png">
+
+    http://dontcodetired.com/blog/post/Making-An-Awesome-Windows-8-Pinned-Tile-for-your-Website.aspx
+    IE:
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/favicon-144x144-ie10.png">
+
+    <meta name="msapplication-square70x70logo" content="/favicon-128x128-ie11.png"/>
+    <meta name="msapplication-square150x150logo" content="/favicon-270x270-ie11.png"/>
+    <meta name="msapplication-wide310x150logo" content="/favicon-558x270-ie11.png"/>
+    <meta name="msapplication-square310x310logo" content="/favicon-558x558-ie11.png"/>
+    -->
+</head>
+<body>
+</body>
+</html>
